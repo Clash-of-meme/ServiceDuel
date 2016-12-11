@@ -185,6 +185,7 @@ public class DuelApiServiceImpl extends DuelApiService {
                     logger.info("¨Participant trouvé");
                     duel.vote(idMeme);
                     session.update(duel);
+                    session.getTransaction().commit();
                     session.close();
                     return Response.status(Constants.CREATED).build();
                 }
