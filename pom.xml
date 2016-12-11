@@ -38,7 +38,7 @@
           <stopKey>stopit</stopKey>
           <stopWait>10</stopWait>
           <httpConnector>
-            <port>8080</port>
+            <port>9000</port>
             <idleTimeout>60000</idleTimeout>
           </httpConnector>
         </configuration>
@@ -51,7 +51,6 @@
             </goals>
             <configuration>
               <scanIntervalSeconds>0</scanIntervalSeconds>
-              <daemon>true</daemon>
             </configuration>
           </execution>
           <execution>

@@ -17,5 +17,5 @@ import javax.ws.rs.core.SecurityContext;
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2016-12-11T15:09:34.277Z")
 public abstract class UserApiService {
-    public abstract Response userLoginDuelGet(Integer login,SecurityContext securityContext) throws NotFoundException;
+    public abstract Response userLoginDuelGet(String login,SecurityContext securityContext) throws NotFoundException;
 }
