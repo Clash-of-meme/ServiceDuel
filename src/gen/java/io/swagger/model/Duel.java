@@ -25,11 +25,12 @@
 
 package io.swagger.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.Date;
+import java.util.Objects;
 
 /**
  * Objet Duel
@@ -40,6 +41,8 @@ public class Duel   {
   @JsonProperty("id")
   private Integer id = null;
 
+  @JsonProperty("start_date")
+  private Date start_date = null;
   @JsonProperty("id_meme1")
   private Integer idMeme1 = null;
 
@@ -51,6 +54,9 @@ public class Duel   {
 
   @JsonProperty("vote_meme2")
   private Integer voteMeme2 = null;
+
+  @JsonProperty("in_progress")
+  private Boolean inProgress = null;
 
   public Duel id(Integer id) {
     this.id = id;
@@ -124,8 +130,8 @@ public class Duel   {
     this.idMeme2 = idMeme2;
   }
 
-  public Duel voteMeme2(Integer voteMeme2) {
-    this.voteMeme2 = voteMeme2;
+  public Duel in_progress(Boolean in_progress) {
+    this.inProgress = in_progress;
     return this;
   }
 
@@ -134,6 +140,42 @@ public class Duel   {
    * @return voteMeme2
   **/
   @ApiModelProperty(value = "Nombre de vote pour le meme 2.")
+  public Boolean getInProgress() {
+    return inProgress;
+  }
+
+  public void setInProgress(Boolean inProgress) {
+    this.inProgress = inProgress;
+  }
+
+  public Duel start_date(Date start_date ) {
+    this.start_date = start_date;
+    return this;
+  }
+
+  /**
+   * Nombre de vote pour le meme 2.
+   * @return voteMeme2
+   **/
+  @ApiModelProperty(value = "Nombre de vote pour le meme 2.")
+  public Date getStart_date() {
+    return start_date;
+  }
+
+  public void setStart_date(Date start_date) {
+    this.start_date = start_date;
+  }
+
+  public Duel voteMeme2(Integer voteMeme2) {
+    this.voteMeme2 = voteMeme2;
+    return this;
+  }
+
+  /**
+   * Nombre de vote pour le meme 2.
+   * @return voteMeme2
+   **/
+  @ApiModelProperty(value = "Nombre de vote pour le meme 2.")
   public Integer getVoteMeme2() {
     return voteMeme2;
   }
@@ -141,7 +183,6 @@ public class Duel   {
   public void setVoteMeme2(Integer voteMeme2) {
     this.voteMeme2 = voteMeme2;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {

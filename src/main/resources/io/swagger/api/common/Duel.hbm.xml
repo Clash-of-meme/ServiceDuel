@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="io.swagger.commons.DuelBO" table="duel" catalog="clashofmeme">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="start_date" type="date">
+            <column name="start_date" not-null="true" />
+        </property>
+        <property name="vote_meme1" type="java.lang.Integer">
+            <column name="vote_meme1" not-null="true" />
+        </property>
+        <property name="vote_meme2" type="java.lang.Integer">
+            <column name="vote_meme2" not-null="true" />
+        </property>
+        <property name="id_meme1" type="java.lang.Integer">
+            <column name="id_meme1" not-null="true"/>
+        </property>
+        <property name="id_meme2" type="java.lang.Integer">
+            <column name="id_meme2" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

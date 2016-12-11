@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">epsi</property>
+        <property name="hibernate.connection.url">jdbc:mysql://164.132.54.5:3306/clashofmeme</property>
+        <property name="hibernate.connection.username">epsi</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">false</property>
+        <property name="generate_statistics">false</property>
+        <property name="use_sql_comments">false</property>
+        <mapping resource="io/swagger/api/common/User.hbm.xml"/>
+        <mapping resource="io/swagger/api/common/Meme.hbm.xml"/>
+        <mapping resource="io/swagger/api/common/Duel.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

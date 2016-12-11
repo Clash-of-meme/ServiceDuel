@@ -47,7 +47,7 @@ public class UserApi  {
         @io.swagger.annotations.ApiResponse(code = 404, message = "Error, Pas de duel.", response = Duel.class, responseContainer = "List"),
         
         @io.swagger.annotations.ApiResponse(code = 503, message = "La base de donnée ne répond pas.", response = Duel.class, responseContainer = "List") })
-    public Response userLoginDuelGet(@ApiParam(value = "L'id d'un utilisateur",required=true) @PathParam("login") Integer login
+    public Response userLoginDuelGet(@ApiParam(value = "L'id d'un utilisateur",required=true) @PathParam("login") String login
 ,@Context SecurityContext securityContext)
     throws NotFoundException {
         return delegate.userLoginDuelGet(login,securityContext);
