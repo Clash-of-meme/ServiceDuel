@@ -1,7 +1,5 @@
 package io.swagger.api.impl;
 
-import com.sun.javafx.geom.AreaOp;
-import io.swagger.api.ApiResponseMessage;
 import io.swagger.api.Constants;
 import io.swagger.api.DuelApiService;
 import io.swagger.api.NotFoundException;
